@@ -4,6 +4,7 @@
 
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
+source $DOTFILES_ROOT/system/*path.zsh
 
 set -e
 

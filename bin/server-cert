@@ -1,0 +1,1 @@
+echo "Q" | openssl s_client -connect $1 | openssl x509 -noout -text

@@ -7,4 +7,5 @@ set -e
 cd "$(dirname $0)"/..
 
 # find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+# ignore homebrew installer because it is called explicitly to install dependencies before other installers
+$(which find) . -not -path "./homebrew/*" -name install.sh | while read installer ; do sh -c "${installer}" ; done

@@ -21,4 +21,7 @@ then
 
 fi
 
+brew tap Homebrew/bundle
+brew bundle --file=${DOTFILES}/homebrew/Brewfile
+
 exit 0

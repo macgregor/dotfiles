@@ -1,0 +1,82 @@
+# Pre-configuration for brew sources
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/services'
+
+# Couple of mandatory applications
+brew 'jenv'
+brew 'readline'
+brew 'xz'
+brew 'zlib'
+brew 'openssl'
+brew 'pyenv'
+brew 'pyenv-virtualenv'
+brew 'autoconf'
+brew 'autojump'
+brew 'bash'
+brew 'cmake'
+brew 'coreutils'
+brew 'gdbm'
+brew 'git'
+brew 'git-crypt'
+brew 'git-extras'
+brew 'gnupg'
+brew 'imapfilter'
+brew 'imagemagick'
+brew 'jpegoptim'
+brew 'libyaml'
+brew 'lua'
+brew 'mas'
+brew 'optipng'
+brew 'openssl'
+brew 'perl'
+brew 'qt'
+brew 'sqlite'
+brew 'packer'
+brew 'pandoc'
+brew 'ruby'
+brew 'subversion'
+brew 'tree'
+brew 'tig'
+brew 'vim'
+brew 'watch'
+brew 'wget'
+brew 'node'
+brew 'yarn'
+brew 'exa'
+brew 'gradle'
+
+# completions
+brew 'bash-completion'
+brew 'brew-cask-completion'
+brew 'zsh-completions'
+
+# Mac GUIs Apps
+cask 'adoptopenjdk8'
+cask 'atom'
+cask 'google-chrome'
+cask 'mactex'
+cask 'virtualbox'
+cask 'rambox'
+cask 'intellij-idea-ce'
+cask 'keepassxc'
+cask 'dbeaver-community'
+cask 'gimp'
+cask 'plex-media-player'
+cask 'spideroakone'
+cask 'steam'
+cask 'iterm2'
+
+# Special fonts
+cask 'font-source-code-pro-for-powerline'
+cask 'font-hack-nerd-font'
+
+# Mac Store Apps
+#mas 'Numbers', id: 409203825
+#mas 'Keynote', id: 409183694
+#mas 'Slack', id: 803453959
+#mas 'Pages', id: 409201541
+#mas 'Tweetbot', id: 557168941

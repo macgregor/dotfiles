@@ -1,0 +1,7 @@
+more $1 | pbcopy
+if [ $? -eq 0 ]
+then
+  echo "=> $1 copied to clipboard."
+else
+  echo "=> error copying $1 to clipboard"
+fi
