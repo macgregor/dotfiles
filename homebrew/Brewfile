@@ -8,46 +8,47 @@ tap 'homebrew/services'
 
 # Couple of mandatory applications
 brew 'jenv'
-brew 'readline'
-brew 'xz'
 brew 'zlib'
 brew 'openssl'
 brew 'pyenv'
 brew 'pyenv-virtualenv'
-brew 'autoconf'
-brew 'autojump'
 brew 'bash'
 brew 'cmake'
 brew 'coreutils'
-brew 'gdbm'
 brew 'git'
-brew 'git-crypt'
 brew 'git-extras'
 brew 'gnupg'
-brew 'imapfilter'
 brew 'imagemagick'
 brew 'jpegoptim'
 brew 'libyaml'
 brew 'lua'
-brew 'mas'
 brew 'optipng'
-brew 'openssl'
 brew 'perl'
 brew 'qt'
 brew 'sqlite'
-brew 'packer'
 brew 'pandoc'
 brew 'ruby'
-brew 'subversion'
 brew 'tree'
 brew 'tig'
 brew 'vim'
-brew 'watch'
 brew 'wget'
 brew 'node'
 brew 'yarn'
 brew 'exa'
 brew 'gradle'
+
+#Possibly Remove
+brew 'readline'
+brew 'xz'
+brew 'autoconf'
+brew 'autojump'
+brew 'gdbm'
+brew 'git-crypt'
+brew 'imapfilter'
+brew 'mas'
+brew 'packer'
+brew 'subversion'
+brew 'watch'
 
 # completions
 brew 'bash-completion'
@@ -66,13 +67,19 @@ cask 'keepassxc'
 cask 'dbeaver-community'
 cask 'gimp'
 cask 'plex-media-player'
-cask 'spideroakone'
 cask 'steam'
 cask 'iterm2'
 
 # Special fonts
 cask 'font-source-code-pro-for-powerline'
 cask 'font-hack-nerd-font'
+
+# Steam on Wine
+tap 'gcenx/wine'
+cask wine-crossover --no-quarantine
+brew winetricks
+# winecfg, set to newer version of windows
+# winetricks steam
 
 # Mac Store Apps
 #mas 'Numbers', id: 409203825

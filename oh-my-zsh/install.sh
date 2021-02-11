@@ -6,7 +6,7 @@ then
   git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 else
   echo 'Updating Oh My ZSH.'
-  git -C ~/.oh-my-zsh pull
+  git -C ~/.oh-my-zsh pull --rebase
 fi
 
 chsh -s /bin/zsh
@@ -18,7 +18,7 @@ then
   git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 else
   echo 'Updating powerlevel9k theme.'
-  git -C ~/.oh-my-zsh/custom/themes/powerlevel9k pull
+  git -C ~/.oh-my-zsh/custom/themes/powerlevel9k pull --rebase
 fi
 
 stat ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions &> /dev/null
@@ -28,7 +28,7 @@ then
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 else
   echo 'Updating zsh-autosuggestions plugin.'
-  git -C ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions pull
+  git -C ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions pull --rebase
 fi
 
 
@@ -39,5 +39,5 @@ then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 else
   echo 'Updating zsh-syntax-highlighting plugin.'
-  git -C ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting pull
+  git -C ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting pull --rebase
 fi
