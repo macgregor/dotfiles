@@ -5,5 +5,7 @@ then
   exit 1
 fi
 
+jenv enable-plugin export
+jenv enable-plugin maven
 jenv rehash
 jenv doctor

@@ -5,9 +5,11 @@ tap 'caskroom/versions'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
+#tap 'homebrew/syncthing'
 
 # Couple of mandatory applications
 brew 'jenv'
+brew 'maven'
 brew 'zlib'
 brew 'openssl'
 brew 'pyenv'
@@ -17,7 +19,7 @@ brew 'cmake'
 brew 'coreutils'
 brew 'git'
 brew 'git-extras'
-brew 'gnupg'
+brew 'gnupg' # gpg encryption
 brew 'imagemagick'
 brew 'jpegoptim'
 brew 'libyaml'
@@ -34,8 +36,12 @@ brew 'vim'
 brew 'wget'
 brew 'node'
 brew 'yarn'
-brew 'exa'
+brew 'exa' # ls replacement
+brew 'bat' # cat replacement
 brew 'gradle'
+brew 'youtube-dl'
+brew 'mac-cleanup' # small script, cleans up unused docker containers, trashcan, temp dirs, etc
+brew 'ansible'
 
 #Possibly Remove
 brew 'readline'
@@ -69,15 +75,19 @@ cask 'gimp'
 cask 'plex-media-player'
 cask 'steam'
 cask 'iterm2'
+cask 'background-music' # better mac volume controls
+#cask 'syncthing' # syncs files between devices
 
 # Special fonts
 cask 'font-source-code-pro-for-powerline'
 cask 'font-hack-nerd-font'
 
 # Steam on Wine
-tap 'gcenx/wine'
-cask wine-crossover --no-quarantine
-brew winetricks
+#tap "gcenx/wine","git@github.com:Gcenx/homebrew-wine.git"
+#cask_args "no-quarantine": true
+#cask 'wine-crossover'
+#cask_args "no-quarantine": false
+#brew 'winetricks'
 # winecfg, set to newer version of windows
 # winetricks steam
 

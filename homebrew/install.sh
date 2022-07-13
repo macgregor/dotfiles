@@ -22,6 +22,6 @@ then
 fi
 
 brew tap Homebrew/bundle
-brew bundle --file=${DOTFILES}/homebrew/Brewfile
+brew bundle --file=${DOTFILES}/homebrew/Brewfile --cleanup --no-lock
 
 exit 0

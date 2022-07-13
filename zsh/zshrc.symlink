@@ -52,6 +52,15 @@ done
 
 unset config_files
 
+# add ssh key to agent so you arent constantly prompted for your password
+#eval $(ssh-agent)
+#ssh-add ~/.ssh/id_rsa
+
+# enable direnv hook
+eval "$(direnv hook zsh)"
+
+eval $(helm completion zsh)
+
 # Better history
 # Credits to https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search
@@ -68,5 +77,20 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 #if [[ "$(basename -- ${(%):-%x})" != "_pokemon-trainer" ]]; then
 #  compdef _pokemon-trainer pokemon-trainer
 #fi
+
+function cluster_function() {
+  ocm_config="$(oc config view --minify -o jsonpath='{.users[0].user.exec.env[?(@.name == "OCM_CONFIG")].value}' 2> /dev/null)"
+  info="$(OCM_CONFIG=$ocm_config ocm backplane status 2> /dev/null)"
+  if [ $? -ne 0 ]; then return; fi
+  clustername=$(grep "Cluster Name" <<< $info | awk '{print $3}')
+  baseid=$(grep "Cluster Basedomain" <<< $info | awk '{print $3}' | cut -d'.' -f1,2)
+  clusterenv=$(grep Basedomain <<< $info | grep -q devshift && echo stg || echo PROD)
+  echo $clusterenv/$clustername.$baseid
+}
+
+#KUBE_PS1_BINARY=oc
+#KUBE_PS1_CLUSTER_FUNCTION=cluster_function
+#PROMPT='$(kube_ps1)'$PROMPT
+
 
 #zprof
