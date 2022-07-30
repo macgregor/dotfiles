@@ -1,5 +1,5 @@
-export GOPATH="/Users/mstratto/go"
+export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 #export OC_PATH="/Users/mstratto/repos/github/public/origin/_output/local/bin/darwin/amd64"
-export PATH="$GOBIN:$PLATFORM_SECRETS_PATH:/Users/mstratto/bin:./bin:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$DOTFILES/bin:$PATH"
+export PATH="$GOBIN:$PLATFORM_SECRETS_PATH:./bin:/usr/local/bin:/usr/local/sbin:$ZSH/bin:$DOTFILES/bin:$PATH"
 export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
