@@ -9,16 +9,19 @@ else
   git -C ~/.oh-my-zsh pull --rebase
 fi
 
-chsh -s /bin/zsh
+# doesnt work for rhel CSB for some reason (ldap integration?)
+#chsh -s /bin/zsh
 
-stat ~/.oh-my-zsh/custom/themes/powerlevel9k &> /dev/null
+stat ~/.oh-my-zsh/custom/themes/powerlevel10k &> /dev/null
 if [ $? -ne 0 ]
 then
-  echo 'Installing powerlevel9k theme.'
-  git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+  echo 'Installing powerlevel10k theme.'
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+  echo 'You should also install/configure terminal font per:'
+  echo '  https://github.com/romkatv/powerlevel10k/blob/master/README.md#meslo-nerd-font-patched-for-powerlevel10k'
 else
-  echo 'Updating powerlevel9k theme.'
-  git -C ~/.oh-my-zsh/custom/themes/powerlevel9k pull --rebase
+  echo 'Updating powerlevel10k theme.'
+  git -C ~/.oh-my-zsh/custom/themes/powerlevel10k pull --rebase
 fi
 
 stat ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions &> /dev/null
