@@ -2,7 +2,7 @@
 if test ! $(which pyenv)
 then
   echo 'pyenv not installed, brew should have already installed it.'
-  exit 1
+  exit 0
 fi
 
 CFLAGS="-O2 -I$(brew --prefix openssl)/include -I$(brew --prefix readline)/include -I$(brew --prefix zlib)/include $(brew --prefix sqlite)/include"
