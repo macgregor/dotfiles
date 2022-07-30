@@ -5,6 +5,11 @@
 # This installs some of the common dependencies needed (or at least desired)
 # using Homebrew.
 
+if test ! "$(uname)" = "Darwin"
+  then
+  exit 0
+fi
+
 # Check for Homebrew
 if test ! $(which brew)
 then
@@ -21,7 +26,16 @@ then
 
 fi
 
+BREWFILE="${DOTFILES}/homebrew/Brewfile"
+if test "$(uname)" = "Darwin"
+then
+  BREWFILE="${DOTFILES}/homebrew/Brewfile.mac"
+elif test ! $(grep -q "release 8" /etc/redhat-release)
+then
+  BREWFILE="${DOTFILES}/homebrew/Brewfile.rhel8"
+fi
+
 brew tap Homebrew/bundle
-brew bundle --file=${DOTFILES}/homebrew/Brewfile --cleanup --no-lock
+brew bundle --file=$BREWFILE --cleanup --no-lock
 
 exit 0
