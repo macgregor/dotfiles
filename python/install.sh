@@ -1,3 +1,8 @@
+if test ! "$(uname)" = "Darwin"
+  then
+  exit 0
+fi
+
 # install pyenv for managing python versions
 if test ! $(which pyenv)
 then
@@ -8,7 +13,7 @@ fi
 CFLAGS="-O2 -I$(brew --prefix openssl)/include -I$(brew --prefix readline)/include -I$(brew --prefix zlib)/include $(brew --prefix sqlite)/include"
 LDFLAGS="-L$(brew --prefix openssl)/lib -L$(brew --prefix readline)/lib"
 
-pyenv versions | grep 3.6 &>/dev/null
+pyenv versions | grep 2.7 &>/dev/null
 if [ $? -eq 1 ]
 then
   pyenv install 2.7.16

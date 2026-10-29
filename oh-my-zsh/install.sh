@@ -10,7 +10,7 @@ else
 fi
 
 # doesnt work for rhel CSB for some reason (ldap integration?)
-#chsh -s /bin/zsh
+#chsh -s /usr/bin/zsh
 
 stat ~/.oh-my-zsh/custom/themes/powerlevel10k &> /dev/null
 if [ $? -ne 0 ]

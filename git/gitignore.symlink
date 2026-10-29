@@ -9,3 +9,8 @@ secret/
 *.pem
 *.keystore
 *.local
+
+**/.claude/settings.local.json
+.qartez/
+
+**/.claude/.cc-writes/

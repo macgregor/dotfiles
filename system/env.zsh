@@ -1,4 +1,10 @@
 export EDITOR='code'
+export BACKPLANE_TUNNEL_ALREADY_UP=yes
+export SUDO_ASKPASS="$HOME/.local/bin/sudo-askpass"
 #export CFLAGS="-I$(brew --prefix openssl)/include"
 #export LDFLAGS="-L$(brew --prefix openssl)/lib"
 #export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export CLAUDE_CODE_NO_FLICKER=1
+export BASH_DEFAULT_TIMEOUT_MS=120000
+export BASH_MAX_TIMEOUT_MS=600000
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

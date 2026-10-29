@@ -1,7 +1,1 @@
-plugins=(
-  sudo
-  z
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  gitfast
-)
+plugins=(sudo z zsh-autosuggestions zsh-syntax-highlighting gitfast)
